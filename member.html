@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+  <meta charset="UTF-8"/>
+  <title>Djupviks hamn | Medlemssida</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link href="https://fonts.googleapis.com/css?family=Arimo|Heebo|Raleway:500,700,800,900&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous"/>
+</head>
+
+<body>
+<div id="container">
+  <header>
+    <div class="content" id="header-content">
+      <h1><a href="index.html" id="titleLink" title="Startsida">Djupviks Hamn</a></h1>
+      <a href="javascript:void(0);" id="menuIcon" class="icon" onclick="toggleNavBar()" title="Navigationsmeny">
+        <i class="fa fa-bars"></i>
+      </a>
+      <nav>
+        <ul id="nav-links">
+          <li class="icon-switch"><a href="index.html"><span id="home-text">Startsida</span><i class="fas fa-home" id="home-icon" title="Startsida"></i></a></li>
+          <li><a href="tourist.html">Turistinformation</a></li>
+          <li class="current"><a href="member.html">Medlemssida</a></li>
+          <li><a href="history.html">Historia</a></li>
+          <li><a href="contact.html">Kontakt</a></li>
+        </ul>
+      </nav>
+      <a href="english.html" title="English" class="language-link">
+        <img src="img/united-kingdom.png" alt="United Kingdom Flag" height="25"/>
+      </a>
+    </div>
+  </header>
+  <div class="content" id="subtitle-content">
+    <h1><a href="index.html" id="subtitle-link" title="Startsida">Djupviks Hamn</a></h1>
+  </div>
+  <div class="content" id="main-content">
+			<aside class="widget top-widget" id="calendar-widget">
+        <div class="month"> 
+          <ul>
+            <li class="prev"><a href="javascript:void(0);" onclick="previousMonth()" title="Föregående Månad">&#10094;</a></li>
+            <li class="next"><a href="javascript:void(0);" onclick="nextMonth()" title="Nästa Månad">&#10095;</a></li>
+            <li id="month-text">Juni<br/></li>
+            <li id="year-text">2019</li>
+          </ul>
+        </div>
+        <ul class="weekdays">
+          <li>Mån</li>
+          <li>Tis</li>
+          <li>Ons</li>
+          <li>Tors</li>
+          <li>Fre</li>
+          <li>Lör</li>
+          <li>Sön</li>
+        </ul>
+        <ul id="calendar-days">
+          <li class="invalidMonth">29</li>
+          <li class="invalidMonth">30</li>
+          <li>1</li>
+          <li class="event"><a href="#" onclick="toggleNavBar()" id="may022019">2</a></li>
+          <li>3</li>
+          <li>4</li>
+          <li>5</li>
+          <li>6</li>
+          <li>7</li>
+          <li>8</li>
+          <li>9</li>
+          <li>10</li>
+          <li>11</li>
+          <li>12</li>
+          <li>13</li>
+          <li>14</li>
+          <li>15</li>
+          <li>16</li>
+          <li>17</li>
+          <li class="event"><a href="#" onclick="toggleNavBar()">18</a></li>
+          <li>19</li>
+          <li>20</li>
+          <li>21</li>
+          <li class="event"><a href="#" onclick="toggleNavBar()">22</a></li>
+          <li>23</li>
+          <li>24</li>
+          <li>25</li>
+          <li>26</li>
+          <li>27</li>
+          <li>28</li>
+          <li>29</li>
+          <li class="current selected">30</li>
+          <li>31</li>
+          <li class="invalidMonth">1</li>
+          <li class="invalidMonth">2</li>
+        </ul>
+        <div id="calendar-event">
+        </div>
+			</aside>
+    <aside class="widget top-widget" id="protokoll-widget">
+      <h2>Protokoll</h2>
+      <p>Det finns inget protokoll att visa för tillfället.
+      </p>
+    </aside>
+    <main>
+      <section>
+        <h2>Senaste Nytt</h2>
+        <article><h3>Hamnjobb</h3><span class="article-date">2019-04-06</span>
+          <p>Lördagen den 6 april samlades ett antal av föreningens medlemmar för arbete i hamnen.
+          Kiosken, kajerna och stranden städades. Kajer lagades och gräs brändes. Diverse fix på många håll.
+          Vädret var bra och korven god. Det som återstår inför säsongen är att ta bort släke från stranden,
+          att sätta upp ramp vid kiosken och att fylla kiosken med varor.</p>
+        </article>
+        <article><h3>Succé för hamnens dag! </h3><span class="article-date">2018-07-16</span>
+          <div class="img-container" style="max-width: 474px;">
+            <picture>
+              <source media="(min-width: 550px)" srcset="img/HamnensDag_large.jpg"/>
+              <source media="(min-width: 375px)" srcset="img/HamnensDag_medium.jpg"/>
+              <img src="img/HamnensDag_small.jpg" alt="Folkmassa som sitter och lyssnar på talare utomhus."/>
+            </picture>
+            <div class="img-text">Foto: Björn Hjernquist</div>
+          </div>
+          <p>Lördagen den 16 juli arrangerade föreningen Djupviks hamn i Eksta ”Hamnens dag” i Djupvik.
+          Vårt arbete har med åren alltmer också inriktats på att alla besökare, även de som kommer landvägen skall trivas i det vackra hamnområdet.
+          Nu bjöds det in till ”Hamnens dag”. På plats fanns sjöfartsverkets SAR-helikopter, Sjöräddningens båt Hwitstjärna,
+          släckningsbil från räddningstjänsten i Klintehamn, russ från Gannarve och ett antal loppisförsäljare.
+          Aktiviteten lockade ett stort antal besökare.
+          Uppskattningsvis 1000 besökare sökte sig under dagen till Djupvik.
+          Intresset var stort för de besökande organisationerna som informerade och alla fick möjlighet att titta och ställa frågor.
+          Barnen fick rida, de bjöds på bulle och dricka och många prövade lyckan i fiskdammen.
+          Det fanns möjlighet att handla kaffe, korv, dricka och glass. Många dröjde sig kvar i hamnområdet och trivdes i det inledningsvis lite blåsiga men vackra vädret.</p>
+          </article>
+        </section>
+      </main>
+      <aside class="widget bottom-widget">
+        <h2>Kontakta styrelsen</h2>
+        <div class="person-container">
+          <span class="person-name">Erik Ekholm</span>
+          <span class="person-info"><a href="mailto:erik@djupvik.se">erik@djupvik.se</a>, 070-123 45 67</span>
+        </div>
+        <div class="person-container">
+          <span class="person-name">Bo Lautin</span>
+          <span class="person-info"><a href="mailto:bo@djupvil.se">bo@djupvil.se</a>, 071-234 56 78</span>
+        </div>
+        <div class="person-container">
+          <span class="person-name">Fredrik Bottarve</span>
+          <span class="person-info"><a href="mailto:fredrik@djupvik.se">fredrik@djupvik.se</a>, 072-345 67 89</span>
+        </div>
+        <div class="person-container">
+          <span class="person-name">Christina Persson</span>
+          <span class="person-info"><a href="mailto:christina@djupvik.se">christina@djupvik.se</a>, 073-456 78 90</span>
+        </div>
+        <div class="person-container">
+          <span class="person-name">Per-Erik Larsson</span>
+          <span class="person-info"><a href="mailto:pere@djupvik.se">pere@djupvik.se</a>, 074-567 89 01</span>
+        </div>
+        <div class="person-container">
+          <span class="person-name">Maria Fagerström</span>
+          <span class="person-info"><a href="mailto:maria@djupvik.se">maria@djupvik.se</a>, 075-678 90 12</span>
+        </div>
+        <div class="person-container">
+          <span class="person-name">Lars Bengtsson</span>
+          <span class="person-info"><a href="mailto:lars@djupvik.se">lars@djupvik.se</a>, 076-789 01 23</span>
+        </div>
+      </aside>
+  </div>
+  <footer>
+    <div class="content" id="footer-content">
+      &copy; Copyright 2019 Djupvikshamn.se | <a href="mailto:info@djupvikshamn.se">info@djupvikshamn.se</a>
+    </div>
+  </footer>  
+</div>
+<script src="js/jquery-3.4.1.min.js" type="text/javascript"></script>
+<script src="js/navbar.js" type="text/javascript"></script>
+<script src="js/calendar.js" type="text/javascript"></script>
+</body>
+</html>

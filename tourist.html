@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+  <meta charset="UTF-8"/>
+  <title>Djupviks hamn | Turistinformation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="css/weather-style.css"/>
+  <link rel="stylesheet" href="css/weather-icons.min.css"/>
+  <link rel="stylesheet" href="css/weather-icons-wind.min.css"/>
+  <link href="https://fonts.googleapis.com/css?family=Arimo|Heebo|Raleway:500,700,800,900&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous"/>
+</head>
+
+<body>
+<div id="container">
+  <header>
+    <div class="content" id="header-content">
+      <h1><a href="index.html" id="titleLink" title="Startsida">Djupviks Hamn</a></h1>
+      <a href="javascript:void(0);" id="menuIcon" class="icon" onclick="toggleNavBar()" title="Navigationsmeny">
+        <i class="fa fa-bars"></i>
+      </a>
+      <nav>
+        <ul id="nav-links">
+          <li class="icon-switch"><a href="index.html"><span id="home-text">Startsida</span><i class="fas fa-home" id="home-icon" title="Startsida"></i></a></li>
+          <li class="current"><a href="tourist.html">Turistinformation</a></li>
+          <li><a href="member.html">Medlemssida</a></li>
+          <li><a href="history.html">Historia</a></li>
+          <li><a href="contact.html">Kontakt</a></li>
+        </ul>
+      </nav>
+      <a href="english.html" title="English" class="language-link">
+        <img src="img/united-kingdom.png" alt="United Kingdom Flag" height="25"/>
+      </a>
+    </div>
+  </header>
+  <div class="content" id="subtitle-content">
+    <h1><a href="index.html" id="subtitle-link" title="Startsida">Djupviks Hamn</a></h1>
+  </div>
+  <div class="content" id="main-content">
+    <aside class="widget top-widget" id="weather-widget">
+      <h2>Väderleksprognos</h2>
+      <div id="weather-container">
+      <a href="javascript:void(0);" class="weather-slider" id="left-slider" onclick="weatherPrevDay()" title="Föregående Dag"><i class="fas fa-arrow-left"></i></a>
+      <a href="javascript:void(0);" class="weather-slider" id="right-slider" onclick="weatherNextDay()" title="Nästa Dag"><i class="fas fa-arrow-right"></i></a>
+      <div id="weather-content">
+      </div>
+    </div>
+    </aside>
+    <main>
+			<section>
+				<h2 class="section-header"><a href="javascript:void(0);" onclick="toggleSection(this)">Gästhamnen</a></h2>
+				<div class="section-content">
+					<article>
+						<p>Gästbåtar är hjärtligt välkomna!</p>
+						<p>Vid normalvattendjup är djupet 3 meter i huvuddelen av hamnen. Vatten och el finns utdraget på kajerna.
+							I land kan vi erbjuda ett modernt servicehus med WC, dusch och tvättmaskin.
+						</p>
+						<p>Ring gärna hamnfogden för att få reda på aktuellt läge.
+							Dygnshyra 150:- /dygn* 
+							El-anslutning 50:-/dygn
+						</p>
+						<p>*inkluderat kort för tillträde till servicehuset och 20:- för två duschar</p>
+						<p>Hamnfogde Bo Lautin Mobil 0707 - 92 03 10</p>
+					</article>
+				</div>
+			</section>
+			<section>
+				<h2 class="section-header"><a href="javascript:void(0);" onclick="toggleSection(this)">Turistmål i närheten</a></h2>
+				<div class="section-content">
+					<article>
+						<h2>Ekstakusten</h2>
+						<p>Djupviks hamn ligger i den norra delen av Ekstakustens långa kuststräcka.
+							Söder om Djupvik hittar man flera besöksmål: Langsteitu med sitt fågelskyddsområde,
+							Kronvalls fiskeläge där Valdemar Atterdag enligt sägnerna landsteg 1361, det fyra långa Ekstakustens naturreservat,
+							Skansudd med Gotlands största kustartelleriskans byggd 1713 och Vavle fiskeläge med sin alltmer populära badstrand.
+						</p>
+						<p>Hela området är otroligt vackert och inbjuder till härliga turer med bil, cykel eller till fots.
+							Man kan ta med egen picnic eller stanna till vid de olika kiosker och restauranger som finns vid de olika stränderna.
+						</p>
+						<p>Att se sol gå ned vid Karlsöarna är ett måste!</p>
+					</article>
+					<article>
+						<h2>Skeppssättning</h2>
+						<p>En skeppssättning är en gravplats från yngre bronsåldern (1100-500 f Kr) och på Gotland kan du hitta 350 stycken skeppssättningar.
+							Denna som finns vid Djupvik, ovanför fiskeläget, är 13 meter lång och 4 meter bred och består av 20 stycken stenar. 
+						</p>
+						<div class="img-container" style="max-width: 1500px;">
+								<picture>
+									<source media="(min-width: 1000px)" srcset="img/Skeppssattning_large.jpg"/>
+									<source media="(min-width: 500px)" srcset="img/Skeppssattning_medium.jpg"/>
+									<img src="img/Skeppssattning_small.jpg" alt="Stenar placerade i oval ute på en gräsplätt."/>
+								</picture>
+								<div class="img-text">Skeppsättningen i Djupvik</div>
+							</div>
+						<p>Skeppssättningen är alltså en gravplats för en person.
+							Personen som dött brändes på bål och sedan krossades och tvättades den dödes ben och lades i en lerkruka.
+							Krukan placerades sedan i en kista av stenhällar i eller intill skeppsättningen. 
+						</p>
+					</article>
+					<article>
+						<h2>Badplatser</h2>
+						<p>Utefter Ekstakusten där Djupviks fiskeläge ligger finns några badstränder. En av dem hittar du här i Djupvik.
+						</p>
+						<div class="img-container" style="max-width: 474px;">
+							<picture>
+								<source media="(min-width: 550px)" srcset="img/DjupviksStrand_large.jpg"/>
+								<source media="(min-width: 375px)" srcset="img/DjupviksStrand_medium.jpg"/>
+								<img src="img/DjupviksStrand_small.jpg" alt="Badstrand vid en skogskrön med folk som badar samt en brygga."/>
+							</picture>
+							<div class="img-text">Djupviks Strand, Foto: Bernt Enderborg</div>
+						</div>
+						<p>Hela området är otroligt vackert och inbjuder till härliga turer med bil, cykel eller till fots.
+							Man kan ta med egen picnic eller stanna till vid de olika kiosker och restauranger som finns vid de olika stränderna.
+						</p>
+					</article>
+					<article>
+						<h2>Öarna</h2>
+						<p>Utanför Djupvik ser man Stora och Lilla Karlsö som båda är Sveriges enda fågelberg och man kan besöka båda under sommaren.
+							Båten utgår från Klintehamn och resan till Lilla Karlsö tar 20 minuter och till Stora Karlsö 30-40 minuter. 
+						</p>
+						<p>För tider och priser och mer information om öarna gå till deras hemsidor:
+							<a href="http://lillakarlso.org/">Lilla Karlsö</a> och <a href="http://www.storakarlso.se/">Stora Karlsö</a>.
+						</p>
+					</article>
+				</div>
+			</section>
+			<section>
+				<h2 class="section-header"><a href="javascript:void(0);" onclick="toggleSection(this)">Restauranger &amp; Boende</a></h2>
+				<div class="section-content">
+					<article>
+						<p>Djupvik Hotel ligger strax ovanför fiskeläget där man kan äta mat, bo och boka för fester och konferenser.
+							Läs mer på deras hemsida: <a href="http://djupvikhotel.com/">Djupvik Hotel</a>
+						</p>
+						<p>Strax norr om Djupvik hittar man Fröjel Resort som har inomhuspool, gym och spa, samt rum och restaurang.
+							Läs mer på deras hemsida: <a href="https://fröjel-resort.se">Fröjdel Resort</a>
+						</p>
+					</article>
+				</div>
+			</section>
+      </main>
+  	</div>
+		<footer>
+			<div class="content" id="footer-content">
+				&copy; Copyright 2019 Djupvikshamn.se | <a href="mailto:info@djupvikshamn.se">info@djupvikshamn.se</a>
+				<div class="footer-credit">Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+			</div>
+		</footer>  
+</div>
+<script src="https://cdn.jsdelivr.net/bluebird/3.5.0/bluebird.min.js" type="text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.3/fetch.js" type="text/javascript"></script>
+<script src="js/jquery-3.4.1.min.js" type="text/javascript"></script>
+<script src="js/navbar.js" type="text/javascript"></script>
+<script src="js/weather_display.js" type="text/javascript"></script>
+</body>
+</html>

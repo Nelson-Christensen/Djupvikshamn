@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <title>Djupviks hamn | English</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="css/weather-style.css"/>
+  <link rel="stylesheet" href="css/weather-icons.min.css"/>
+  <link rel="stylesheet" href="css/weather-icons-wind.min.css"/>
+  <link href="https://fonts.googleapis.com/css?family=Arimo|Heebo|Raleway:500,700,800,900&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous"/>
+</head>
+
+<body>
+<div id="container">
+  <header>
+    <div class="content" id="header-content">
+      <h1><a href="index.html" id="titleLink" title="Startsida">Djupviks Hamn</a></h1>
+      <a href="javascript:void(0);" id="menuIcon" class="icon" onclick="toggleNavBar()" title="Navigationsmeny">
+        <i class="fa fa-bars"></i>
+      </a>
+      <nav>
+        <ul id="nav-links">
+          <li class="current icon-switch"><a href="index.html"><span id="home-text">Startsida</span><i class="fas fa-home" id="home-icon" title="Startsida"></i></a></li>
+          <li><a href="tourist.html">Turistinformation</a></li>
+          <li><a href="member.html">Medlemssida</a></li>
+          <li><a href="history.html">Historia</a></li>
+          <li><a href="contact.html">Kontakt</a></li>
+        </ul>
+      </nav>
+      <a href="english.html" title="English" class="language-link">
+        <img src="img/united-kingdom.png" alt="United Kingdom Flag" height="25"/>
+      </a>
+    </div>
+  </header>
+  <div class="content" id="subtitle-content">
+    <h1><a href="index.html" id="subtitle-link" title="Startsida">Djupviks Hamn</a></h1>
+  </div>
+  <div class="content" id="main-content">
+    <aside class="widget top-widget" id="weather-widget">
+      <h2>Weather Forecast</h2>
+      <div id="weather-container">
+      <a href="javascript:void(0);" class="weather-slider" id="left-slider" onclick="weatherPrevDay()" title="Föregående Dag"><i class="fas fa-arrow-left"></i></a>
+      <a href="javascript:void(0);" class="weather-slider" id="right-slider" onclick="weatherNextDay()" title="Nästa Dag"><i class="fas fa-arrow-right"></i></a>
+      <div id="weather-content">
+      </div>
+    </div>
+    </aside>
+    <main>
+      <section>
+        <h2>Port of Djupvik</h2>
+        <p>The Port of Djupvik is located on the east coast of Gotland very close to the beautiful smaller island Lilla Karlsö.
+          Adjacent to the port is a small and charming fishing-village which, during summer, comes to life with a relaxed and welcoming buzz.
+        </p>
+        <p>
+          Close by and situated with a fantastic view over the port is Djupvik Hotel, with modern standard and with its own popular restaurant.
+        </p>
+        <p>
+          Both the port and the fishing village have a beautiful view of two popular bird islands called “Lilla Karlsö” and “Stora Karlsö”.
+        </p>
+        <p>
+          The coastline south of Djupvik, called “Ekstakusten” is incredibly beautiful and invites to nice scenery and views on foot, by bike or by car.
+        </p>
+        <p>
+          North, and connected to the port, is a small sandy beach which is well soothed for a nice swim.
+        </p>
+        <p>
+          The distance from the port to Lilla Karlsö is about 2 nautical miles and it is about twice as long to Stora Karlsö (4nm).
+        </p>
+        <p>
+          For more information, check out the websites: lillakarlso.org and storakarlso.se. For information about Djupvik Hotel: djupvikhotel.com
+        </p>
+        <p>
+          Are you interested of visiting Djupvik by boat? The 24 hour rate is 150 sek including key to the service house and a 20 sek fee to the two showers.
+          A connection to the electricity is an additional 50 sek / 24 hour.
+        </p>
+        <p>
+          Please contact the port manager for more inquiries: Bo Lautin, cellnr: +46 707 920310
+        </p>
+      </section>
+    </main>
+    
+    <aside class="widget bottom-widget" id="contact">
+      <h2>Contact Us</h2>
+      <article>
+        <h3>Contact information</h3>
+        <p>Harbourmaster: Bo Lautin<br/> Phone: 0707-920310</p>
+        <p>
+          Djupviks hamnförening
+          c/o Ekholm
+          Eksta Hägur 170
+          623 54 Klintehamn
+        </p>
+      </article>
+      <article>
+        <h3>Contact form</h3>
+        <form action="#">
+          <fieldset><legend>Your personal details:</legend>
+            <label for="FirstName">First name:</label>
+            <input type="text" name="firstname" id="FirstName" required/>
+            <label for="LastName">Surname:</label>
+            <input type="text" name="lastname" id="LastName" required/>
+            <label for="Number">Mobile:</label>
+            <input type="tel" name="number" id="Number"/>
+            <label for="Email">E-mail:</label>
+            <input type="email" name="email" id="Email"/>
+          </fieldset>
+          <fieldset><legend>Category</legend>
+            <label class="radio-container" for="berth">
+              <input type="radio" checked="checked" name="category" value="berth" id="berth"/>
+              <span class="radio-content">Berth</span>
+            </label>
+            <label class="radio-container" for="member">
+              <input type="radio" name="category" value="member" id="member"/>
+              <span class="radio-content">Member</span>
+            </label>
+            <label class="radio-container" for="other">
+              <input type="radio" name="category" value="other" id="other"/>
+              <span class="radio-content">Other</span>
+            </label>
+            <label for="Title">Title:</label>
+            <input type="text" name="title" id="Title" required/>
+            <label for="Message">Message:</label>
+            <textarea name="message" id="Message" rows="1" cols="1" maxlength="500" required></textarea>
+          </fieldset>
+          <fieldset><legend>How would you liked to be contacted?</legend>
+            <label class="radio-container" for="mail">
+              <input type="radio" checked="checked" name="contact" value="mail" id="mail"/>
+              <span class="radio-content">E-mail</span>
+            </label>
+            <label class="radio-container" for="tel">
+              <input type="radio" name="contact" value="tel" id="tel"/>
+              <span class="radio-content">Phone</span>
+            </label>
+            <label class="radio-container" for="none">
+              <input type="radio" name="contact" value="none" id="none"/>
+              <span class="radio-content">Nothing</span>
+            </label>
+            <input type="submit" value="Send"/>
+          </fieldset>
+        </form>
+      </article>
+    </aside>
+  </div>
+  <footer>
+    <div class="content" id="footer-content">
+      &copy; Copyright 2019 Djupvikshamn.se | <a href="mailto:info@djupvikshamn.se">info@djupvikshamn.se</a>
+      <div class="footer-credit">Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+    </div>
+  </footer>  
+</div>
+<script src="https://cdn.jsdelivr.net/bluebird/3.5.0/bluebird.min.js" type="text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.3/fetch.js" type="text/javascript"></script>
+<script src="js/jquery-3.4.1.min.js" type="text/javascript"></script>
+<script src="js/navbar.js" type="text/javascript"></script>
+<script src="js/contact_form.js" type="text/javascript"></script>
+<script src="js/weather_display.js" type="text/javascript"></script>
+</body>
+</html>

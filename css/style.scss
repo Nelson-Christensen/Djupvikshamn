@@ -1,0 +1,918 @@
+@import "./variables";
+
+/* Global Reset */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+a{
+    text-decoration: none;
+    color: $text-color1;
+}
+
+
+
+
+html, body{
+	font-family: 'Heebo', Arial, Helvetica, sans-serif;
+	line-height: 1.5;
+	padding: 0;
+	margin: 0;
+	min-height: 100%;
+	height: 100%;
+	min-width: 320px;
+	color: $text-color1;
+}
+
+body{
+    background-image: url("../img/bg_small.jpg");
+    background-color: $bg-color4;
+    background-size: cover;
+    background-attachment: fixed;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 800;
+    font-size: 1.8em;
+    text-transform: uppercase;
+}
+
+h2{
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.5em;
+    font-weight: 500;
+}
+
+h3{
+    font-family: 'Lucida Bright', sans-serif;
+    font-weight: bold;
+}
+
+#container{
+    width: 100%;
+    min-height: 100%;
+    position: relative;
+}
+
+.content {
+    width: 100%;
+    max-width: 1500px;
+    margin: auto;
+    box-sizing: border-box
+}
+
+/* HEADER */
+
+header{
+    z-index: 2;
+    position: sticky;
+    top: 0%;
+    width: 100%;
+    background-color: $bg-color3-full;
+    box-shadow: 0px 4px 3px 1px rgba(0,0,0,0.5);
+    transition: 0.5s;
+}
+
+header:hover, header:focus-within{
+    background-color: $bg-color3-full;
+}
+
+header h1{
+    display: inline;
+    margin-right: 35px;
+}
+
+header .fa-bars {
+    font-size: 1.8em;
+    line-height: 1.5em;
+    padding: 0px 10px;
+    transform: scale(1.25,1);
+}
+
+header #menuIcon {
+    float: left;
+    color: $text-color2;
+    transition: 1s;
+}
+
+header #menuIcon:hover{
+    color: $text-color1;
+}
+
+header #menuIcon:focus{
+    color: $text-color1;
+}
+
+/* NAV */
+
+nav{
+    overflow: hidden;
+    display: none;
+    width: 100%;
+}
+
+#nav-links{
+    background-color: $bg-color1;
+    transition: 1s;
+}
+
+#nav-links a{
+    float: none;
+    display: block;
+    color: $bg-color2;
+    text-align: left;
+    padding: 10px 16px 5px 16px;
+    text-decoration: none;
+    font-size: 1.1em;
+    border-bottom: solid 2px $bg-color1;
+    font-family: 'Arimo', sans-serif;
+    font-weight: bold;
+    transition: 0.5s;
+}
+
+#nav-links li{
+    float: none;
+    display: block;
+    transition: 0.5s;
+}
+
+#nav-links li.current {
+    background-color: $bg-color1;
+}
+
+#nav-links a:hover, #nav-links a:focus{
+    background-color: $bg-color3;
+}
+
+#home-icon{
+    display: none;
+    font-size: 1.7em;
+    box-sizing: border-box;
+}
+
+.language-link{
+    position: absolute;
+    top: 8px;
+    right: 3px;
+    box-shadow: 0px 0px 3px 1px rgba(0,0,0,0.5);
+    box-sizing: border-box;
+    filter: grayscale(50%);
+    transition: 0.5s;
+}
+
+.language-link img{
+    display: block;
+}
+
+.language-link:hover, .language-link:focus{
+    filter: grayscale(0%);
+}
+
+/* SUBTITLE */
+
+#subtitle-content{
+    margin: 50px auto;
+    text-align: center;
+}
+
+#subtitle-content a{
+    display: none;
+    padding: 10px;
+}
+
+#subtitle-content h1 {
+    font-weight: 900;
+    font-size: 3em;
+    line-height: 1.2em;
+}
+
+#subtitle-content h1 a{
+    color: $text-color2;
+    padding: 0 10px;
+    text-shadow:
+    -1px -1px 3px rgba(0,0,0,0.5),  
+     1px -1px 3px rgba(0,0,0,0.5),
+     -1px 1px 3px rgba(0,0,0,0.5),
+      1px 1px 3px rgba(0,0,0,0.5);
+    transition: 0.5s;
+    border-bottom: solid 3px transparent;
+}
+
+#subtitle-content h1 a:hover, #subtitle-content h1 a:focus{
+    border-bottom-color: $bg-color2;
+    color: $text-color3;
+}
+
+/* WIDGETS */
+
+.widget{
+    background-color: $bg-color2;
+    color: $text-color4;
+    margin: 10px;
+    transition: 0.5s;
+    -webkit-box-shadow: 0px 0px 8px 1px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 0px 8px 1px rgba(0,0,0,0.5);
+    box-shadow: 0px 0px 8px 1px rgba(0,0,0,0.5);
+}
+
+.widget:hover, .widget:focus-within{
+    background-color: $bg-color2-full;
+}
+
+.widget a{
+    color: $text-color1;
+}
+
+.widget a:hover, .widget a:focus{
+    color: $text-color1;
+}
+
+.widget h2{
+		background-color: $accent-color4;
+    padding: 5px 0;
+		color: $text-color3;
+    text-align: center;
+    box-shadow: 0 6px 5px -5px $bg-color2;
+}
+
+.top-widget {
+    margin-bottom: 25px;
+}
+
+.bottom-widget {
+    margin-top: 25px;
+}
+
+.widget article {
+    text-align: center;
+    padding: 10px;
+    box-shadow: 0px 0px 4px 1px $accent-color4;
+}
+
+/* Contact Widget */
+
+.widget form{
+    padding: 10px;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: [description] 3.3fr [input-start] 3.3fr [input-middle] 3.3fr [input-end];
+    grid-row-gap: 10px;
+    grid-column-gap: 5px;
+}
+
+.widget fieldset{
+    display: contents;
+}
+
+#contact {
+    font-size: 1em;
+    font-family: 'Arimo', Arial, sans-serif;
+}
+
+#contact label{
+    align-self: center;
+    grid-column: description;
+    text-align: right;
+}
+
+#contact legend{
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 -3px 2px -2px $accent-color4;
+    padding-top: 5px;
+    margin-top: 10px;
+    grid-column: 1 / 4;
+}
+
+#contact input, #contact textarea{
+    background-color: $bg-color2;
+    padding: 5px 10px;
+    display: inline-block;
+    border: 2px solid $bg-color2;
+    color: $text-color4;
+    border-radius: 4px;
+    box-sizing: border-box;
+    grid-column: input-start / input-end;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#contact input[type="submit"]{
+    font-size: 1em;
+    font-family: 'Arimo', Arial, Helvetica, sans-serif;
+    grid-column: description / input-end;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+#contact input[type="submit"]:hover, #contact input[type="submit"]:focus{
+    background-color: $accent-color3;
+    color: $text-color2;
+}
+
+#contact input:focus, #contact textarea:focus{
+    color: $text-color2;
+    border-color: $accent-color4;
+}
+
+#contact .radio-container{
+    height: 35px;
+    text-align: center;
+    align-self: stretch;
+    position: relative;
+    cursor: pointer;
+    font-size: 100%;
+    font-family: 'Arimo', Arial, sans-serif;
+    padding: 5px 8px;
+    display: inline-block;
+    color: $text-color4;
+    margin: 0px 3px;
+    box-sizing: border-box;
+    grid-column-start: auto;
+    grid-column-end: auto;
+    content: "";
+    transition: 0.5s;
+}
+
+#contact .radio-container input{
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.radio-container:hover input ~ .radio-content, .radio-container input:focus ~ .radio-content  {
+    transition: 0.5s;
+    border-color: $accent-color4;
+}
+
+.radio-container input:checked ~ .radio-content {
+    transition: 0.5s;
+    background-color: $accent-color4;
+    color: $text-color3;
+}
+
+.radio-content {
+    position: absolute;
+    padding: 5px 0px;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: $bg-color2;
+    border: 2px solid $bg-color2;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+#contact textarea{
+    grid-column: input-start / input-end;
+    width: 100%;
+    resize: vertical;
+}
+
+/* Calendar Widget */
+/* Base code taken from https://www.w3schools.com/howto/howto_css_calendar.asp */
+
+/* Month header */
+.month {
+  padding: 15px;
+	background: $bg-color3-full;
+	background-color: $accent-color4;
+  text-align: center;
+}
+
+/* Month list */
+.month ul {
+  margin: 0;
+  padding: 0;
+}
+
+.month ul li {
+  color: white;
+  font-size: 1.3em;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+/* Previous button inside month header */
+.month .prev {
+  float: left;
+  padding-top: 10px;
+}
+
+/* Next button */
+.month .next {
+  float: right;
+  padding-top: 10px;
+}
+
+.month a{
+	color: white;
+}
+
+.month a:hover, .month a:focus{
+	color: gray;
+}
+
+/* Weekdays (Mon-Sun) */
+.weekdays {
+  display: grid;
+	grid-template-columns: repeat(7, 1fr);
+	-ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  background-color:#ddd;
+}
+
+.weekdays li {
+	font-size: 0.8em;
+  text-align: center;
+	color: #616161;
+	cursor: default;
+	background-color:rgb(221, 221, 221);
+	padding: 10px 0;
+}
+
+/* Days (1-31) */
+#calendar-days {
+  background: #eee;
+  display: grid;
+	grid-template-columns: repeat(7, 1fr);
+	-ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+#calendar-days li {
+  padding: 5px 0;
+  text-align: center;
+  font-size: 0.8em;
+	color: #6c6c6c;
+  cursor: default;
+  box-sizing: border-box;
+  border: 2px solid transparent;
+}
+
+/* Highlight the "current" day */
+#calendar-days li.current {
+	background: $bg-color3-full;
+	background-color: $accent-color3;
+	color: white !important;
+}
+
+/* Highlight the "selected" day */
+#calendar-days li.selected {
+	border: 2px solid $accent-color4;
+}
+
+/* Highlight days with events */
+#calendar-days li.event {
+	padding: 0;
+	border-bottom: solid 5px $accent-color4;
+	box-sizing: border-box;
+	font-weight: bold;
+}
+
+#calendar-days li a{
+	padding: 5px 0;
+	width: 100%;
+	display: block;
+}
+
+#calendar-days li a:hover, #calendar-days li a:focus{
+	background-color: $bg-color3-full;
+	background-color: $bg-color4-full;
+}
+
+#year-text{
+	font-size: 1em;
+}
+
+/* Gray out days from other months (if the first day is a wednesday, the tuesday and monday will be grayed out) */
+#calendar-days li.invalidMonth {
+	color: $text-color4;
+}
+
+#calendar-event{
+	color: $text-color4;
+}
+
+// #calendar-event h3{
+// 	background-color: $accent-color3;
+// 	color: $text-color3;
+// 	text-align: center;
+// 	padding: 5px;
+// }
+
+#calendar-event p{
+	font-size: 0.9em;
+	padding: 10px;
+}
+
+/* Protokoll Widget */
+
+#protokoll-widget p{
+	padding: 10px;
+}
+
+/* Kontakta Styrelsen Widget */
+
+.person-container{
+	padding: 5px;
+	margin: 5px;
+	box-shadow: 0 4px 4px -4px $accent-color4;
+}
+
+.person-container:last-child{
+	box-shadow: none;
+}
+
+.person-name{
+	display: block;
+	text-align: center;
+}
+
+.person-info{
+	font-size: 0.8em;
+	text-align: center;
+	display: block;
+}
+
+.person-info a{
+	color: $text-color4;
+}
+
+.person-info a:hover, .person-info a:focus{
+	color: $text-color2;
+}
+
+
+/* MAIN */
+
+main{
+    background-color: $bg-color1;
+    -webkit-box-shadow: 0px 0px 8px 1px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 0px 8px 1px rgba(0,0,0,0.5);
+    box-shadow: 0px 0px 8px 1px rgba(0,0,0,0.5);
+    margin: 10px;
+    transition: 0.5s;
+    display: block;
+}
+
+#main-content {
+    padding-bottom: 100px;
+}
+
+main:hover, main:focus-within{
+    background-color: $bg-color1-full;
+}
+
+#main-content main section {
+    padding: 20px 15px;
+    box-shadow: 0 4px 4px -4px $bg-color2;
+}
+
+section p{
+    padding: 5px 0;
+}
+
+article{
+    margin: 15px 10px;
+    box-shadow: 1px 1px 4px 1px $bg-color3;
+}
+
+main article h3{
+    padding: 10px;
+    background-color: $bg-color3;
+}
+
+article h2{
+    padding: 10px;
+}
+
+main article .article-date{
+    display: block;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+main article p{
+    padding: 10px;
+}
+
+main article p a{
+    text-decoration: underline;
+}
+
+.img-container{
+    margin: auto;
+    text-align: center;
+    background-color: white;
+    box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 25px;
+    box-sizing: border-box;
+}
+
+.img-text{
+    color: $text-color1;
+    text-align: center;
+    padding: 8px 20px;
+}
+
+.section-header{
+    text-align: center;
+    margin: 0px;
+    margin: auto;
+
+}
+
+.section-header a{
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    display: block;
+    max-width: 300px;
+    font-weight: bold;
+    box-shadow: 0px 0px 4px 0 rgba(0, 0, 0, 0.2);
+    background-color: $bg-color5;
+    transition: 0.5s;
+}
+
+.section-header a:hover, .section-header a:focus{
+    background-color: $bg-color3;
+}
+
+.section-content{
+    display: block;
+}
+
+/* FOOTER */
+/* Always bottom footer inspired by https://matthewjamestaylor.com/bottom-footer */
+
+footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: $bg-color2;
+    color: $text-color4;
+    padding: 10px 0px;
+    box-shadow: 0px -1px 2px $bg-color2;
+}
+
+footer a{
+    color: $text-color4;
+}
+
+.footer-credit{
+	font-size: 0.7em;
+}
+
+@media screen and (min-width: 500px) {
+    body{
+        background-image: url("../img/bg_medium.jpg");
+    }
+
+    #weather-content{
+        max-width: 100%;
+    }
+
+    header h1, header .fa-bars{
+        line-height: 2em;
+    }
+
+    header h1{
+        margin-right: 0;
+    }
+
+    .language-link{
+        top: 12px;
+        right: 12px;
+    }
+
+    #nav-links{
+        display: flex;
+        background-color: $bg-color3-full;
+        margin-right: 60px;
+    }
+
+    #nav-links li{
+        flex-grow: 1;
+    }
+
+    #nav-links a{
+        text-align: center;
+        box-sizing: border-box;
+        border-right: solid 1px $bg-color1;
+        border-left: solid 1px $bg-color1;
+        border-bottom: solid 10px transparent;
+        padding: 10px 0 5px 0;
+    }
+
+    #nav-links li:hover a, #nav-links li:focus a{
+        border-bottom-color: $bg-color1-full;
+        background-color: $bg-color5;
+    }
+
+    #nav-links a:hover, #nav-links a:focus{
+        background-color: $bg-color5;
+        border-bottom-color: $bg-color1-full;
+    }
+
+    #nav-links li.current {
+        background-color: $bg-color1;
+    }
+
+    #menuIcon{
+        display: none;
+    }
+
+    #titleLink{
+        display: none;
+    }
+
+    nav{
+        display: block;
+    }
+
+    #home-icon{
+        display: inline-block;
+        margin-top: -5px;
+    }
+
+    #home-text{
+        display: none;
+    }
+
+    #subtitle-content a{
+        display: inline-block;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    #main-content{
+        display: grid;
+        grid-template-columns: 2fr minmax(320px, 1fr);
+        grid-template-rows: auto auto auto auto auto;
+    }
+
+    .widget {
+        margin: 10px;
+        order: 2;
+        -webkit-box-shadow: 0px 0px 8px 2px rgba(0,0,0,0.5);
+        -moz-box-shadow: 0px 0px 8px 2px rgba(0,0,0,0.5);
+        box-shadow: 0px 0px 8px 2px rgba(0,0,0,0.5);
+    }
+
+    main{
+        grid-row-start: 1;
+        grid-row-end: 6;
+        order: 1;
+        margin: 10px;
+        -webkit-box-shadow: 0px 0px 8px 2px rgba(0,0,0,0.5);
+        -moz-box-shadow: 0px 0px 8px 2px rgba(0,0,0,0.5);
+        box-shadow: 0px 0px 8px 2px rgba(0,0,0,0.5);
+    }
+
+    #weather-content{
+        max-width: 200%;
+    }
+
+    header{
+        position: relative;
+    }
+
+    #subtitle-content a h1{
+        font-size: 4em;
+    }
+}
+
+@media screen and (min-width: 980px) {
+    body{
+        background-image: url("../img/bg_large.jpg");
+    }
+}
+
+/* IE9+ Specific css to handle the grid from the contact form */
+@media screen and (min-width:0\0) and (min-resolution: +72dpi) {
+    .widget form{
+        display: block;
+        text-align: left;
+        margin: auto;
+        padding: 0;
+    }
+
+    #contact label {
+        display: inline-block;
+        width: 40%;
+        align-self: auto;
+    }
+
+    #contact label.radio-container{
+        width: 29%;
+    }
+
+    #contact input, #contact textarea {
+        width: 50%;
+    }
+
+    #main-content{
+        display: block;
+        overflow: auto;
+    }
+
+    footer{
+        position: relative;
+        margin-top: 20px;
+    }
+
+    .weekdays{
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .weekdays li{
+        width: 14%;
+    }
+
+    #calendar-days{
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    #calendar-days li{
+        width: 14.28%;
+    }
+}
+
+/* IE10+ with min-width */
+@media all and (min-width: 768px) and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    .widget {
+        width: 44%;
+        float: right;
+    }
+    
+    #protokoll-widget{
+        width: 50%;
+        float: left;
+    }
+
+    main{
+        float: left;
+        width: 50%;
+    }
+
+    footer{
+        clear: both;
+    }
+}
+
